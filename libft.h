@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include <sys/errno.h>
 
 # ifndef E_BOOL
 #  define E_BOOL
