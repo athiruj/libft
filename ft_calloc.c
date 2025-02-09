@@ -19,7 +19,10 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!count || !size)
 		return (malloc(1));
 	if (count > INT_MAX / size)
+	{
+		errno = ENOMEM;
 		return (NULL);
+	}
 	tmp = malloc(count * size);
 	if (!tmp)
 		return (NULL);
